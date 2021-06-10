@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SumArray
@@ -28,6 +29,19 @@ namespace SumArray
             //Usando linq
             double result = vet.Sum();
             Console.WriteLine(result);
+
+            var lista = new List<Teste>()
+            {
+                new Teste{ Valor = 1},
+                new Teste{ Valor = 2}
+            };
+
+            var s = lista.Sum(l => l.Valor);
         }
+    }
+
+    class Teste
+    {
+        public int Valor { get; set; }
     }
 }
